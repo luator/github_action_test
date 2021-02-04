@@ -1,6 +1,12 @@
 lorem ipsum dolor sit amat...
 
-FIXME: add more lorem ipsum
-
 
 123456
+
+FIXME: blabla
+
+more content
+
+and here is a TODO: foobar
+
+blabla

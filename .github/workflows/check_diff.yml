@@ -1,0 +1,21 @@
+name: Check Diff
+
+on: pull_request
+
+jobs:
+  fixmes:
+    name: FIXME check
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: git fetch origin ${GITHUB_BASE_REF}
+    - name: Check for FIXMEs
+      uses: luator/github_action_check_new_todos@master
+      with:
+          label: FIXME
+          base_ref: origin/${{ github.base_ref }}
+    - name: Check for TODOs
+      uses: luator/github_action_check_new_todos@master
+      with:
+          label: TODO
+          base_ref: origin/${{ github.base_ref }}
